@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    background-color: black;
+    padding: 10px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 40vw;
+}
+
+li {
+    margin-right: 5vw;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    transition: all 0.3s;
+    transform-origin: center;
+}
+
+a:hover {
+    color: #66ccff;
+    transform: scale(1.5);
+}
+
+.pintristContainer {
+    width: 1400px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 30px;
+    perspective: 800px;
+}
+
+.pintristContainer .card {
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    /* margin-left: 2vw; */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+}
+
+.hoverContainer:hover > .card {
+    box-shadow: 0 8px 16px 0 rgba(0, 0 , 0.2);
+    transform: rotateY(180deg);
+}
+
+.hoverContainer .card img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+}
+
+.back {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+@media (max-width: 1200px) {
+    .pintristContainer
+    {
+        width: calc(100% - 40px);
+        columns: 3;
+    }
+}
+    
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 8vw;
+}
