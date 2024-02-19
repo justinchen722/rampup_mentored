@@ -111,8 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
             hoverContainer.appendChild(randomizeThisList[i]);
             pintristContainer.appendChild(hoverContainer);
         }
-
-        const 
     }
 
     function cleared() {
